@@ -1,10 +1,12 @@
 import React from "react"
 import {createRoot} from "react-dom/client"
+import Header from "./components/header/index"
+import * as styles from "./styles.module.css"
 
 const App = () => {
   return (
     <>
-      <div>Hello, world!</div>
+      <Header />
     </>
   )
 }
