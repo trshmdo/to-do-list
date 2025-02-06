@@ -1,0 +1,10 @@
+.container input {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  font-size: 0.6rem;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 6px;
+  border: 1px solid rgb(149, 149, 255);
+}
