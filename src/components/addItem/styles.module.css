@@ -1,20 +1,18 @@
 .container {
   border-radius: 6px;
   border: 1px solid rgb(149, 149, 255);
-  padding: 10px;
-  max-width: 210px;
-  width: 210px;
+  padding: 0.4rem;
+  width: 100%;
   background-color: whitesmoke;
 }
 
-.container > * {
+.container > form > * {
   border-radius: 6px;
   border: 1px solid rgb(149, 149, 255);
-  max-width: 100%;
   width: 100%;
   font-size: 0.4rem;
   color: gray;
-  padding: 5px;
+  padding: 0.2rem;
 }
 
 .title {
@@ -25,7 +23,7 @@
   height: 3rem;
 }
 
-.container > button {
+.container > form > button {
   color: white;
   background-color: rgba(33, 33, 255, 0.658);
 }

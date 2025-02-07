@@ -2,8 +2,8 @@ import * as styles from "./styles.module.css"
 
 export default function AddItem() {
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <form>
         <input name="Title" placeholder="Title" className={styles.title} />
         <textarea
           name="Description"
@@ -11,7 +11,7 @@ export default function AddItem() {
           className={styles.description}
         />
         <button>Add Task</button>
-      </div>
-    </>
+      </form>
+    </div>
   )
 }
