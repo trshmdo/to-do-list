@@ -2,6 +2,7 @@ import React from "react"
 import {Item} from "components/item"
 import * as styles from "./styles.module.css"
 import {STATUS_INFO} from "lib/status"
+import {TEST_DATA} from "lib/test-data"
 
 interface StatusColumnProps {
   status: "to-start" | "in-progress" | "completed"
@@ -12,26 +13,20 @@ export const StatusColumn: React.FC<StatusColumnProps> = ({status}) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.progress}>
-        <span className={styles.circle} style={{backgroundColor: color}} />
-        <p>{name}</p>
-      </div>
+      <h2 className={styles.name}>
+        <span style={{backgroundColor: color}}>{name}</span>
+      </h2>
       <div className={styles.tasks}>
-        <Item
-          title="Title of the Task"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniamobcaecati ipsum sit blanditiis dolorem labore, nesciunt"
-          status={status}
-        />
-        <Item
-          title="Title of the Task"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniamobcaecati ipsum sit blanditiis dolorem labore, nesciunt"
-          status={status}
-        />
-        <Item
-          title="Title of the Task"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniamobcaecati ipsum sit blanditiis dolorem labore, nesciunt"
-          status={status}
-        />
+        {TEST_DATA.filter((task) => task.status === status).map(
+          ({title, description, status}, index) => (
+            <Item
+              key={index}
+              title={title}
+              description={description}
+              status={status}
+            />
+          )
+        )}
       </div>
     </div>
   )

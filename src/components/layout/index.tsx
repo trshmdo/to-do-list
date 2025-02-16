@@ -1,6 +1,6 @@
 import React from "react"
 import {Header} from "./header"
-import {Search} from "./search"
+import {Counter} from "components/counter"
 import * as styles from "./styles.module.css"
 
 interface LayoutProps {
@@ -11,8 +11,8 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
     <>
       <Header />
-      <Search />
-      <div className={styles.wrapper}>{children}</div>
+      <main className={styles.main}>{children}</main>
+      <Counter />
     </>
   )
 }

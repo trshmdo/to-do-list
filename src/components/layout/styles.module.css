@@ -1,6 +1,63 @@
-.wrapper {
+.main {
+  margin: 0 auto;
   display: flex;
-  padding: 0.4rem;
+  padding: 24px 0;
   justify-content: space-between;
   flex-flow: row nowrap;
+  max-width: 768px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.logo {
+  margin-bottom: 24px;
+}
+
+.logo > span {
+  position: relative;
+  top: -6px;
+  display: block;
+  font-size: 0.45rem;
+  font-style: italic;
+}
+
+.logo > h1 {
+  font-size: 1.2rem;
+}
+
+.search {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 2px 16px;
+  height: 32px;
+  border-radius: 50px;
+  border: 2px solid;
+  width: 320px;
+  font-weight: bold;
+}
+
+.search::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(202, 202, 202);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji;
+  font-weight: bold;
+}
+
+.search:focus {
+  background-color: #fff9db;
 }
