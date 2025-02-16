@@ -1,21 +1,10 @@
 import React from "react"
 import {createRoot} from "react-dom/client"
-import Header from "./components/header/index"
-import Search from "./components/search/index"
-import MainSection from "./components/progress/index"
-import * as styles from "./styles.module.css"
+import {App} from "components/app"
 
-const App = () => {
-  return (
-    <>
-      <Header />
-      <Search />
-      <MainSection />
-    </>
-  )
+const rootElement = document.getElementById("root")
+
+if (rootElement) {
+  const root = createRoot(rootElement)
+  root.render(<App />)
 }
-
-const rootElement = document.getElementById("root") as Element
-const root = createRoot(rootElement)
-
-root.render(<App />)

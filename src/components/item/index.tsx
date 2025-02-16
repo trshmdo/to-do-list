@@ -1,14 +1,18 @@
+import React from "react"
 import * as styles from "./styles.module.css"
 
-export default function Item() {
+interface ItemProps {
+  title: string
+  description: string
+  status: "to-start" | "in-progress" | "completed"
+}
+
+export const Item: React.FC<ItemProps> = ({title, description}) => {
   return (
     <div className={styles.container}>
       <article>
-        <h3>Title of the Task</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-          obcaecati ipsum sit blanditiis dolorem labore, nesciunt
-        </p>
+        <h3>{title}</h3>
+        <p>{description}</p>
       </article>
     </div>
   )

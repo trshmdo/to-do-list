@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-  entry: path.resolve(__dirname, "..", "./src/index.tsx"),
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "..", "dist"),
     filename: "bundle.js"
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: [".ts", ".tsx", ".js"],
+    modules: ["src", "node_modules"]
   },
   module: {
     strictExportPresence: true,
@@ -20,16 +21,17 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.module.css$/,
+        test: /\.(s[ac]|c)ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: "css-loader", // translates css into CommonJS
             options: {
               esModule: true,
+              // css modules
               modules: {
-                namedExport: true,
-                localIdentName: "[local]--[hash:base64:5]"
+                localIdentName: "[name]__[local]__[hash:base64:5]", // format of output
+                namedExport: true // named exports instead of default
               }
             }
           }

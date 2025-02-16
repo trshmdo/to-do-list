@@ -1,0 +1,32 @@
+.container {
+  width: 32%;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.progress > p {
+  padding-left: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.circle {
+  display: block;
+  width: 0.5rem; /* Ширина круга */
+  height: 0.5rem; /* Высота круга */
+  border-radius: 50%; /* Закругление углов для создания круга */
+}
+
+.tasks {
+  background-color: rgba(149, 149, 255, 0.185);
+  height: 100vh;
+  padding: 0.4rem;
+  border-radius: 6px;
+}
+
+.tasks > * {
+  margin-bottom: 0.4rem;
+}
