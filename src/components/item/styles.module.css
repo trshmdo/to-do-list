@@ -1,0 +1,20 @@
+.container {
+  border-radius: 6px;
+  border: 1px solid rgb(149, 149, 255);
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.container > article {
+  padding: 0.4rem;
+}
+
+.container h3 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  font-size: 0.4rem;
+  color: gray;
+}

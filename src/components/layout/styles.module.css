@@ -1,0 +1,6 @@
+.wrapper {
+  display: flex;
+  padding: 0.4rem;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
