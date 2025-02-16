@@ -13,10 +13,9 @@ export const StatusColumn: React.FC<StatusColumnProps> = ({status}) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.progress}>
-        <span className={styles.circle} style={{backgroundColor: color}} />
-        <p>{name}</p>
-      </div>
+      <h2 className={styles.name}>
+        <span style={{backgroundColor: color}}>{name}</span>
+      </h2>
       <div className={styles.tasks}>
         {TEST_DATA.filter((task) => task.status === status).map(
           ({title, description, status}, index) => (
